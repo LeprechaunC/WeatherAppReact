@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+body 
+  {
+    background-color: rgb(94, 94, 94) !important;
+    font-family: 'Open Sans', sans-serif !important;
+  }
+.Header {
+    padding: 30px;
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-weight: bolder;
+   }
+  
+  .Header ul{
+    display: flex;
+    justify-content: end;
+    align-self: center;
+    margin: 0;
+    list-style-type: none;
+ 
+  }
+  
+  .Header ul li a {
+    margin-right: 5px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .Header ul   :hover 
+  {
+    color: rgb(139, 72, 72);
+  }
+
+.Logo 
+{
+    font-size: 130%;
+    color: rgb(81, 106, 248);
+}
+.dashVertical 
+{
+    width: 2px;
+    height: 20px;
+    background-color: green;
+}
+
+@media only screen and (max-width: 768px) {
+    .Header ul {
+        display: block;
+        padding: 0px;
+       }
+      .Header 
+      {
+        display: block;
+        text-align: center;
+      }
+      .Header li 
+      {
+        margin-top: 15px;
+        padding: 0px;
+      }
+      .Header li a 
+      {
+        display: block;
+        padding: 0px;
+
+      }
+      
+    }
