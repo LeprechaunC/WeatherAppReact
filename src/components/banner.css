@@ -1,0 +1,55 @@
+.bannerImage {
+height: 100%; width: 100%;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centeredLeft {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    }
+
+
+    .informationText 
+{
+  text-align: center;
+ 
+}
+ 
+.informationText input 
+{
+    width: 300px;
+    height: 50px;
+    display: block;
+     margin-bottom: 20px;
+}
+.informationText input, .informationText button 
+{
+    border-radius: 30px;
+    border-style: none;
+
+
+}
+.informationText button 
+{
+width: 50%;
+height: 100%;
+border-style: solid;
+transition: border-color 0.5s;
+ }
+
+.informationText button:hover 
+{
+     border-color: rgb(130, 200, 100);
+ }
+ 
+ @media only screen and (max-width: 768px) 
+ {
+  .bannerImage 
+  {
+    position: block;
+  }
+ }

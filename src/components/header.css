@@ -1,71 +1,135 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-body 
-  {
-    background-color: rgb(94, 94, 94) !important;
-    font-family: 'Open Sans', sans-serif !important;
-  }
-.Header {
-    padding: 30px;
-    background-color: #ffff;
-    display: flex;
-    justify-content: space-between;
-    color: black;
-    font-weight: bolder;
-   }
-  
-  .Header ul{
-    display: flex;
-    justify-content: end;
-    align-self: center;
-    margin: 0;
-    list-style-type: none;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
  
-  }
+body {
+  font-family: 'Open Sans', sans-serif;
   
-  .Header ul li a {
-    margin-right: 5px;
-    margin-left: 15px;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .Header ul   :hover 
-  {
-    color: rgb(139, 72, 72);
-  }
-
-.Logo 
-{
-    font-size: 130%;
-    color: rgb(81, 106, 248);
-}
-.dashVertical 
-{
-    width: 2px;
-    height: 20px;
-    background-color: green;
 }
 
+.Header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  background-color: white;
+  border-bottom: 4px solid rgb(130, 200, 100);
+
+
+
+}
+
+.Header ul {
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+}
+
+.Header ul li a{
+  margin-left: 30px;
+  text-decoration: none;
+  color: inherit;
+ 
+}
+.header ul li a:hover, .link :hover
+{
+color:green;
+}
+.link {
+  border: none;
+  background-color: transparent;
+  font-weight: inherit;
+  
+ }
+
+ 
+.dropdown-menu-main
+{
+  position: absolute;
+  left: 0;
+  top: calc(100% + .25rem);
+  background-color: white;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+
+}
+ .dropdown.active > .link + .dropdown-menu-main 
+{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+
+}
+ #icon{
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: bottom;
+ }
+.information-grid
+{
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.logo 
+{
+  font-style: italic;
+ 
+
+}
+.logo:hover
+{
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+    cursor:pointer;
+}
+.login-form > input {
+  margin-bottom: .5rem;
+}
+ 
+.dropdown-menu-main .dropdown-heading   h1
+ {
+ font-style: 11px;
+ }
+
+.dropdown-heading h2 
+{
+  font-size: 1rem;
+  color: #619B8A;
+
+} 
+.dropdown-links a 
+{
+  text-decoration: none;
+  color:rgb(116, 116, 116)
+}
 @media only screen and (max-width: 768px) {
-    .Header ul {
-        display: block;
-        padding: 0px;
-       }
-      .Header 
-      {
-        display: block;
-        text-align: center;
-      }
-      .Header li 
-      {
-        margin-top: 15px;
-        padding: 0px;
-      }
-      .Header li a 
-      {
-        display: block;
-        padding: 0px;
+  
+ 
+  .Header
+   {
+     display: block;
+     text-align: left;
+   }
 
-      }
-      
-    }
+  .all-links
+  {
+  display: block;
+  margin-top: 5%;
+  text-align: center;
+
+  }
+  .all-links ul 
+  {
+    display: inline-flex;
+  }
+
+  
+}
