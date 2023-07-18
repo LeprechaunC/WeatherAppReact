@@ -3,20 +3,17 @@ import logo from './logo.svg';
 import Header from './components/header'; // Corrected import statement
 import Footer from './components/footer';
 import Banner from './components/banner'; 
-
-
+  
 import { useState, useEffect } from 'react';
 
 import './components/header.css';
 import './components/styles.css';
 import './components/footer.css';
 import './components/banner.css';
-import './scripts/scripts.js';
-
- 
+   
  
 function App() {
-  
+  /*
   const [weather, setWeather] = useState<any>();
   const [city, setCity] = useState<any>();
  
@@ -43,6 +40,7 @@ function App() {
       console.log("Failed to connect to API.", error)
       }
       }
+ 
  <div className="informationText">
    {weather && city && (
     <h1>
@@ -53,6 +51,7 @@ function App() {
 
    
    </div>
+         */
   
 
     
@@ -61,7 +60,7 @@ function App() {
       <div className="App">
          <Header />
          <Banner></Banner>
-          <h2>ello</h2>
+        <h1 className="fakecontent"></h1>
         <Footer></Footer>
       
       </div>

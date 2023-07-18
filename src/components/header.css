@@ -1,135 +1,173 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
  
-body {
-  font-family: 'Open Sans', sans-serif;
-  
-}
-
-.Header {
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bolder;
-  background-color: white;
-  border-bottom: 4px solid rgb(130, 200, 100);
-
-
-
-}
-
-.Header ul {
-  display: flex;
-  margin: 0;
-  list-style-type: none;
-}
-
-.Header ul li a{
-  margin-left: 30px;
-  text-decoration: none;
-  color: inherit;
- 
-}
-.header ul li a:hover, .link :hover
-{
-color:green;
-}
-.link {
-  border: none;
-  background-color: transparent;
-  font-weight: inherit;
-  
- }
-
- 
-.dropdown-menu-main
-{
-  position: absolute;
-  left: 0;
-  top: calc(100% + .25rem);
-  background-color: white;
-  padding: .75rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-
-}
- .dropdown.active > .link + .dropdown-menu-main 
-{
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-
-}
- #icon{
-  font-size: inherit;
-  line-height: inherit;
-  vertical-align: bottom;
- }
-.information-grid
-{
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 2rem;
-}
-.dropdown-links {
-  display: flex;
-  flex-direction: column;
-  gap: .25rem;
-}
-.logo 
-{
-  font-style: italic;
  
 
-}
-.logo:hover
-{
-  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
-    cursor:pointer;
-}
-.login-form > input {
-  margin-bottom: .5rem;
+.header {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding:   2rem 2rem 2rem 2rem;
+  align-items: center; 
+  font-size: 14px;
+  font-weight: 700;
+  position: fixed;
+  z-index: 100;
+  width: 100%; 
+  transition: padding 0.2s, display 1s;
 }
  
-.dropdown-menu-main .dropdown-heading   h1
+ .contents 
  {
- font-style: 11px;
- }
-
-.dropdown-heading h2 
-{
-  font-size: 1rem;
-  color: #619B8A;
-
-} 
-.dropdown-links a 
-{
-  text-decoration: none;
-  color:rgb(116, 116, 116)
-}
-@media only screen and (max-width: 768px) {
+   margin-left: 1.3rem;
+   margin-right: 5rem;
+  }
   
- 
-  .Header
-   {
-     display: block;
-     text-align: left;
-   }
 
-  .all-links
+ .fixednav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Aligns items to the left and right */
+  z-index: 9999;
+  width: 100%;
+  height: 60px;
+ 
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ 
+  
+}
+
+.links li a:not(:first-child) {
+ visibility: inherit;
+ 
+}
+
+.logo {
+  flex: 1;
+  
+ }
+ .header-logo
+ {
+  width: 8rem;
+ }
+ 
+
+.links li {
+  padding: 0 10px;
+    gap: 1rem;
+ 
+ 
+}
+
+.links li:not(:last-child) a {
+  text-decoration: none;
+   color: rgb(39, 39, 39);
+   padding-bottom:2px;
+  background-image: linear-gradient(rgb(130, 200, 100) 0 0);
+  background-position: 0 100%; 
+  display: inline-block;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.2s,
+    background-position 0s 0.2s;
+}
+.links li a:hover {
+ 
+   background-position: 100% 100%;  
+   background-size: 100% 2px;
+ }
+ .links li a 
+ {
+  transition: margin-top 1s;
+ }
+#button-header 
+{
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: rgb(135, 228, 106);
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+  text-decoration: none ;
+  display: block;
+}
+#button-header:hover
+{
+  background-color:  rgb(97, 145, 76)
+}
+ul 
+{
+  gap: 1rem;
+}
+#menu-button 
+{
+  display:none;
+}
+.header-logo:hover{
+  cursor: pointer;
+  
+}
+
+@media only screen and (max-width: 1023px) {
+ 
+ .header 
+ {
+  animation: padding 1s;
+ }
+  .header-logo
+  {
+    display: inline;
+  }
+  #menu-button
   {
   display: block;
-  margin-top: 5%;
-  text-align: center;
-
+   float: right;
+   cursor:pointer;
+   position: absolute;
+   right: 1rem;
+   top: 3rem;
+ 
   }
-  .all-links ul 
+  
+  .links
   {
-    display: inline-flex;
+    display: block;
+    text-align: center;
+  
   }
+  
+    .links a 
+    {
+    margin-top: 2rem;
+ 
+    }
+  .contents 
+  {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  
+ 
+  
+ 
+}
+  
+ 
+  
 
   
 }
+@media only screen and (min-width: 1024px) 
+{
+   .header .contents .links li a
+  {
+     display: grid !important;
+  }
+
+}
+
+ 

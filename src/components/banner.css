@@ -4,7 +4,7 @@ height: 100%; width: 100%;
 .container {
     position: relative;
     text-align: center;
-    color: white;
+  
   }
   .centeredLeft {
     position: absolute;
@@ -24,7 +24,20 @@ height: 100%; width: 100%;
     width: 300px;
     height: 50px;
     display: block;
-     margin-bottom: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
+    border-color: rgb(130, 200, 100);
+    border-style: solid;
+    font-size: 24px;
+    
+}
+.informationText input:focus
+{
+ 
+    border-color: rgb(130, 200, 100);
+    border-style: solid;
+    outline: none;
+    
 }
 .informationText input, .informationText button 
 {
@@ -46,10 +59,62 @@ transition: border-color 0.5s;
      border-color: rgb(130, 200, 100);
  }
  
+ .data-container 
+ {
+  float: left;
+  width: 50%;
+ }
+
+ .data-information 
+ {
+  background-color: white;
+  padding: 70px 200px 30px 70px;
+  border-radius: 30px;
+ }
+ 
+.line 
+{
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rebeccapurple;
+  margin: 30px;
+}
+ 
+.centeredLeft table 
+{
+  border: none;
+  border-collapse: initial;
+ 
+}
+th, td {
+   padding: 8px;
+   
+}
+.data-table 
+{
+background-color: white;
+padding: 30px;
+border-radius: 10px;
+
+}
+.data-table tr 
+{
+  border-bottom: rgba(0, 0, 0, 0.3);
+  border-bottom-style: none;
+  border-style: solid;
+  border-width: 1px;
+
+  
+}
+
  @media only screen and (max-width: 768px) 
  {
-  .bannerImage 
+ 
+  .Container .centeredLeft 
   {
-    position: block;
+    left: 30px;
+    position: relative;
   }
+  
+   
  }
