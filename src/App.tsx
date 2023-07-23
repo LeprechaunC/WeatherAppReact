@@ -50,6 +50,7 @@ function App() {
   <button onClick={() => checkWeather()}>Go</button>
 
    
+  <Footer></Footer>
    </div>
          */
   
@@ -60,10 +61,15 @@ function App() {
       <div className="App">
          <Header />
          <Banner></Banner>
-        <h1 className="fakecontent"></h1>
-        <Footer></Footer>
+        <div className="fakecontent">
+          <h1>Welcome</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, rem! Magnam praesentium suscipit quas iusto cum. Optio consequatur quis dignissimos aliquid, enim corrupti rerum quibusdam veritatis molestias a doloremque, labore in quaerat temporibus nam est odit odio pariatur eligendi voluptatum id dolorem nesciunt. Maxime, iure earum? Deserunt ad possimus iste tempora. Nostrum illum modi quis esse rem ut alias, illo accusantium explicabo temporibus laborum voluptatem doloremque voluptatibus vitae voluptatum sed perferendis minus sint perspiciatis cupiditate nihil. Illo voluptatibus repudiandae quisquam dicta, eos quia commodi voluptate optio tempore a possimus aspernatur provident voluptatem quis et! Maxime ut nesciunt numquam possimus molestiae.</p>
+        </div>
+         
+ 
+        </div>
       
-      </div>
+    
     );
   }
   
