@@ -55,6 +55,7 @@
  .header-logo
  {
   width: 8rem;
+  padding-bottom: 1rem;
  }
  
 
@@ -118,7 +119,39 @@ ul
   width: 100%;
   height: 8rem;
 }
+  
+.city-search-toggle input 
+{
+  border-style: none;
+ 
+  background-color: rgb(226, 226, 226);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+ 
+  background-color: rgb(130, 200, 100);
+}
 
+ 
+ 
+.material-symbols-outlined 
+{
+  vertical-align: -5px;
+  color: black;
+  
+   
+
+}
+
+.toggleTemp 
+{
+  cursor: pointer;
+  font-size: 1.5rem;
+  
+}
+.toggleTemp:active
+{
+   color: yellow;
+}
 
 @media only screen and (max-width: 1023px) {
  
@@ -157,16 +190,8 @@ ul
   {
     margin-left: 5rem;
     margin-right: 5rem;
-  
- 
-  
- 
 }
-  
  
-  
-
-  
 }
 @media only screen and (min-width: 1024px) 
 {
@@ -174,7 +199,9 @@ ul
   {
      display: grid !important;
   }
+   
 
 }
 
+ 
  

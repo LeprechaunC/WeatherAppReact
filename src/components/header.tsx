@@ -70,13 +70,23 @@ window.onscroll = function() {headerAnim()};
   <header className="header">
     <div className="contents"> 
     <ul className="links">
-      <li className="logo"><img className="header-logo" alt="logo" src={logo}></img></li>
       
-      <li><a href="#">WEATHER</a></li>
+      <li className="logo"><img className="header-logo" alt="logo" src={logo}></img></li>
+      <a className='city-search-toggle'>
+      <span className="material-symbols-outlined">
+      search
+      
+      </span>
+      <input placeholder="Enter a City"></input>
+
+      </a>
+       <li><a href="#">WEATHER</a></li>
       <li><a href="#">TECHNOLOGIES</a></li>
       <li><a href="#">INDUSTRIES</a></li>
       <li><a href="#">ABOUT</a></li>
       <li><a href="#" id="button-header" >CONTACT US</a></li>
+      
+ 
      
      </ul>
     <span id="menu-button" onClick={hideMenu} className="material-symbols-outlined">

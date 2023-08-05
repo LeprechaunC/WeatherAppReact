@@ -1,0 +1,15 @@
+.cities-container 
+{
+    padding: 2rem;
+    margin: 2rem;
+    font-weight: 700;
+    
+}
+.cities-container h1
+{
+    font-weight: inherit;
+}
+.row-analysis 
+{
+    display: flex;
+}

@@ -7,32 +7,32 @@
   background-image: url(bg.jpg);
   background-size:cover;
   padding: 2rem;
-  display: flex;
-  justify-content:baseline;
+ 
   color: white;
   font-size: 1.5rem;
-  columns: 2;
+ 
  
 }
  
 .weather-contents, .today-analytics 
 
 {
-   padding: 2rem;
-
+ 
   display: inline-flex;
   flex-direction: column;
   padding: 2rem;
+ 
   
 }
 .today-analytics 
 {
   flex-direction: row;
-  display: block;
+  display: flex;
   background: rgba(245,246,250,.09);
-  backdrop-filter: blur(3px);
+   
   border-radius: 10px;
-  padding: 40px 30px;
+  padding: 10px 30px;
+ 
 
 }
 .weather-main-content
@@ -108,12 +108,20 @@ border-bottom: 1px solid #cfcfcf ;
 
 {
   height: 22rem;
-  width: 51rem;
-  background-color: rgba(255, 255, 255, 0.4);
+  width: 40rem;
   border-radius: 1rem;
- 
+  background-color: 'transparent';
  
 }
+.analysis-graph h3
+{
+  opacity: .5;
+color: #fff;
+font-size: 1.5rem;
+letter-spacing: 3.4px;
+text-transform: uppercase;
+}
+
 #city 
 {
   font-weight: 700;
@@ -127,11 +135,13 @@ border-bottom: 1px solid #cfcfcf ;
 .analysis-graph
 {
   padding: 2rem;
+ 
 }
 .weather-logo
 {
   width: auto;
   height: 5rem;
+ 
 }
 .feels-like-par
 {
@@ -153,20 +163,34 @@ border-bottom: 1px solid #cfcfcf ;
  
 .all-div-containers 
 {
-  column-count: 2
-  ;
+  display: flex;
 }
 .analytics-contents 
 
 {
   columns: 5;
+  display: inline;
 }
+ 
+.ui-chart {
+  position: relative;
+ 
+}
+.recharts-default-tooltip{
+  pointer-events: none;
+   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+ }
+ 
  
 @media only screen and (max-width: 1023px) { 
   .weather-log 
   {
     justify-content:center;
   }
+ 
  
  
 }
@@ -176,4 +200,16 @@ border-bottom: 1px solid #cfcfcf ;
     transition: none;
   }
 
+}
+
+@media only screen and (max-width: 1023px) 
+{
+  .all-div-containers
+  {
+    display: block;
+  }
+  .analysis-graph 
+  {
+    width: 99%;
+  }
 }
